@@ -1,3 +1,5 @@
+import sys
+sys.stdin = open("input.txt", "r")
 from collections import deque
 def bfs():
     # q 등 필요데이터 생성
