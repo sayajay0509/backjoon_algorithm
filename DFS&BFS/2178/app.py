@@ -1,3 +1,4 @@
+from collections import deque
 def bfs(si,sj,ei,ej):
     q=[]
     q=[[0]*M for _ in range(N)]
