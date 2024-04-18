@@ -1,7 +1,7 @@
 import sys
 sys.stdin = open("input.txt", "r")
 
-def des(c):
+def dfs(c):
     global ans
     ans +=1
     v[c]=1
