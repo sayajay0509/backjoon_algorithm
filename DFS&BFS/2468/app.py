@@ -1,3 +1,24 @@
+from collections import deque
+def bfs(si,sj,h):
+    q = deque()
+    q.append((si,sj))
+    v[si][sj]=1
+    while q:
+        ci,cj=popleft()
+        for di, dj in ((-1,0),(1,0),(0,-1),(0,1)):
+            ni,nj = ci+di, cj+dj
+            if 0<=ni<=N and 0<=nj<=N and v[ni][nj]==0 and arr[ni][nj]>h:
+                q.append((ni,nj))
+                v[ni][nj]=1
+
+def solve(h):
+    cnt =0
+    for i in range(N):
+        for j in range(N):
+            if v[i][j]=0 and arr[j][h]>h:
+                bfs(i,j,h)
+                cnt +=1
+    return cnt
 N=int(input())
 arr=[list(map(int,input().split())) for _ in range(N)]
 ans=0
