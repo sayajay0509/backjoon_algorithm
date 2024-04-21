@@ -1,6 +1,9 @@
 import sys
 input = sys.stdin.read
-
+# 1 점화식을 찾는다
+# 2 dp 배열 초기화를 한다
+# 3 초기 조건 설정한다
+# 4 점화식을 이용해서 dp 배열 채운다
 def solve(n):
     # dp 배열 초기화
     dp = [0] * (max(n) + 1)
