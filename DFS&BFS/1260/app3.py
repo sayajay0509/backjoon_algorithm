@@ -13,7 +13,7 @@ def bfs(s):
     
     v[s]=1 # 방문 표시
     while q:
-        c=q.popleft() #q에있는 데이터 추출
+        q= q.popleft() #q에있는 데이터 추출
         for n in adj[c]:
             if not v[n]:
                 q.append(n)
